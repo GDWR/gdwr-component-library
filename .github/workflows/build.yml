@@ -1,0 +1,29 @@
+name: Build
+
+on:
+  workflow_run:
+    workflows: [ Lint ]
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - run: yarn install
+
+      - run: yarn build
+
+      - name: Produce artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: gdwr-component-library
+          path: dist

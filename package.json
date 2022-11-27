@@ -1,10 +1,9 @@
 {
-  "name": "gdwr-component-library",
-  "version": "0.0.1",
+  "name": "@gdwr/gdwr-component-library",
   "description": "React component library",
+  "version": "0.0.1",
   "author": "gregory.dwr@gmail.com",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "build": "rollup -c",
     "lint": "prettier --check src/"
@@ -21,5 +20,18 @@
     "rollup-plugin-dts": "^5.0.0",
     "tslib": "^2.4.1",
     "typescript": "^4.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gdwr/gdwr-component-library"
+  },
+  "type": "module",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "@gdwr:registry": "https://npm.pkg.github.com/gdwr"
   }
 }
