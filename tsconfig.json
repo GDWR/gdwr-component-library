@@ -1,22 +1,26 @@
 {
   "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig to read more about this file */
-    // Default
+    "outDir": "lib/esm",
+    "module": "esnext",
     "target": "es5",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-
-    // Added
+    "lib": ["es6", "dom", "es2016", "es2017"],
     "jsx": "react-jsx",
-    "module": "ESNext",
     "declaration": true,
-    "declarationDir": "types",
-    "sourceMap": true,
-    "outDir": "dist",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true
-  }
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true
+  },
+    "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "src/**/*stories.*",
+    "src/**/*tests.*",
+  ]
 }
