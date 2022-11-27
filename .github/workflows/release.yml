@@ -5,6 +5,30 @@ on:
     types: [ created ]
 
 jobs:
+  storybook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - run: yarn install
+
+      - run: yarn run build-storybook
+        env:
+          NODE_OPTIONS: "--openssl-legacy-provider"
+
+      - run: touch storybook-static/.nojekyll
+
+      - name: Deploy Storybook
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        with:
+          branch: gh-pages
+          folder: storybook-static/
+
   release:
     runs-on: ubuntu-latest
 
