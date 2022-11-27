@@ -1,7 +1,7 @@
 {
   "name": "@gdwr/gdwr-component-library",
   "description": "React component library",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "gregory.dwr@gmail.com",
   "license": "MIT",
   "scripts": {
