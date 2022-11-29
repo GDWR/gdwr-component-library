@@ -1,3 +1,3 @@
 export default function Button({ label }: { label: string }) {
-  return <button> {label} </button>;
+  return <button className="bg-orange-500"> {label} </button>;
 }

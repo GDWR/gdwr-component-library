@@ -17,10 +17,10 @@
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true
   },
-    "include": ["src"],
+    "include": ["src/"],
   "exclude": [
-    "node_modules",
-    "src/**/*stories.*",
-    "src/**/*tests.*",
+    "node_modules/",
+    "src/**/*.stories.*",
+    "src/**/*.tests.*",
   ]
 }
